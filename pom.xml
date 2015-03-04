@@ -4,4 +4,7 @@
   <artifactId>HouseAI</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <modules>
+  	<module>CamDetector</module>
+  </modules>
 </project>

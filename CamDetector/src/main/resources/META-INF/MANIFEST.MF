@@ -1,0 +1,1 @@
+Main-Class: org.nuc.houseai.WebCamDetector

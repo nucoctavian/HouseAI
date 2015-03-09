@@ -6,7 +6,6 @@
 		<artifactId>HouseAI</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>CamDetector</artifactId>
 	<repositories>
 		<repository>
 			<id>distry-snapshots</id>
@@ -15,32 +14,10 @@
 	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>sample</groupId>
-			<artifactId>com.sample</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.build.directory}/../src/main/resources/v4l4j.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>org.nuc</groupId>
 			<artifactId>DistryService</artifactId>
 			<version>0.1</version>
 		</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-
-					<finalName>CamDetector</finalName>
-
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<artifactId>DummyListener</artifactId>
 </project>

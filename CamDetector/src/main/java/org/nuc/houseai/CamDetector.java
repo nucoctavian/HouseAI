@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 import javax.imageio.ImageIO;
+import javax.jms.JMSException;
+
+import org.nuc.distry.service.DistryService;
+import org.nuc.distry.service.ServiceConfiguration;
 
 import au.edu.jcu.v4l4j.CaptureCallback;
 import au.edu.jcu.v4l4j.FrameGrabber;
@@ -13,7 +17,7 @@ import au.edu.jcu.v4l4j.VideoDevice;
 import au.edu.jcu.v4l4j.VideoFrame;
 import au.edu.jcu.v4l4j.exceptions.V4L4JException;
 
-public class CamDetector implements CaptureCallback {
+public class CamDetector extends DistryService implements CaptureCallback {
 
     private static int width, height, std, channel;
     private static String device;
@@ -22,7 +26,11 @@ public class CamDetector implements CaptureCallback {
     private FrameGrabber frameGrabber;
     private final CountDownLatch countDownLatch = new CountDownLatch(1);
 
-    public CamDetector() {
+    private static final String SERVICE_NAME = "camDetection";
+
+    public CamDetector(ServiceConfiguration configuration) throws Exception {
+        super(SERVICE_NAME, configuration);
+
         device = (System.getProperty("test.device") != null) ? System.getProperty("test.device") : "/dev/video0";
         width = (System.getProperty("test.width") != null) ? Integer.parseInt(System.getProperty("test.width")) : 640;
         height = (System.getProperty("test.height") != null) ? Integer.parseInt(System.getProperty("test.height")) : 480;
@@ -43,9 +51,14 @@ public class CamDetector implements CaptureCallback {
 
     }
 
-    public void start() throws V4L4JException, InterruptedException {
-        frameGrabber.startCapture();
-        countDownLatch.await();
+    public void start() {
+        try {
+            super.start();
+            frameGrabber.startCapture();
+            countDownLatch.await();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void stop() {
@@ -61,11 +74,12 @@ public class CamDetector implements CaptureCallback {
             long now = System.currentTimeMillis();
             File outputfile = new File(String.format("image-%d.jpg", now));
             ImageIO.write(frame.getBufferedImage(), "jpg", outputfile);
+            this.sendMessage("HouseAI.CamDetector", "Captura primita");
             frame.recycle();
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (JMSException e) {
+            e.printStackTrace();
         }
-
     }
-
 }

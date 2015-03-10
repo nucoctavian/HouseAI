@@ -9,6 +9,7 @@ import javax.jms.JMSException;
 
 import org.nuc.distry.service.DistryService;
 import org.nuc.distry.service.ServiceConfiguration;
+import org.nuc.houseai.service.Topics;
 
 import au.edu.jcu.v4l4j.CaptureCallback;
 import au.edu.jcu.v4l4j.FrameGrabber;
@@ -74,7 +75,7 @@ public class CamDetector extends DistryService implements CaptureCallback {
             long now = System.currentTimeMillis();
             File outputfile = new File(String.format("image-%d.jpg", now));
             ImageIO.write(frame.getBufferedImage(), "jpg", outputfile);
-            this.sendMessage("HouseAI.CamDetector", "Captura primita");
+            this.sendMessage(Topics.CAM_DETECTOR, "Captura primita");
             frame.recycle();
         } catch (IOException e) {
             e.printStackTrace();

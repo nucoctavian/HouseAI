@@ -7,12 +7,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>CamDetector</artifactId>
-	<repositories>
-		<repository>
-			<id>distry-snapshots</id>
-			<url>https://github.com/nucandrei/repository/raw/master/snapshots</url>
-		</repository>
-	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>sample</groupId>
@@ -23,8 +17,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.nuc</groupId>
-			<artifactId>DistryService</artifactId>
-			<version>0.1</version>
+			<artifactId>Service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -36,9 +30,7 @@
 					<archive>
 						<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
 					</archive>
-
 					<finalName>CamDetector</finalName>
-
 				</configuration>
 			</plugin>
 		</plugins>

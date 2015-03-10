@@ -7,5 +7,9 @@
   <modules>
   	<module>CamDetector</module>
   	<module>DummyListener</module>
+  	<module>ActuatorAPI</module>
+  	<module>TestSevice</module>
+  	<module>Service</module>
+  	<module>MediaService</module>
   </modules>
 </project>

@@ -6,12 +6,18 @@
 		<artifactId>HouseAI</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>DummyListener</artifactId>
+	<artifactId>Service</artifactId>
+	<repositories>
+		<repository>
+			<id>distry-snapshots</id>
+			<url>https://github.com/nucandrei/repository/raw/master/snapshots</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.nuc</groupId>
-			<artifactId>Service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>DistryService</artifactId>
+			<version>0.1</version>
 		</dependency>
 	</dependencies>
 </project>

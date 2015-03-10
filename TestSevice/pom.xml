@@ -6,7 +6,9 @@
 		<artifactId>HouseAI</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>DummyListener</artifactId>
+	<groupId>org.nuc.houseai</groupId>
+	<artifactId>TestSevice</artifactId>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.nuc</groupId>

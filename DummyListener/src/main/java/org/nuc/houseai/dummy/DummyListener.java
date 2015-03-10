@@ -5,7 +5,8 @@ import java.io.Serializable;
 import org.nuc.distry.service.DistryListener;
 import org.nuc.distry.service.DistryService;
 import org.nuc.distry.service.ServiceConfiguration;
-import org.nuc.distry.service.messaging.ActiveMQAdapter;
+import org.nuc.houseai.service.DistryUtils;
+import org.nuc.houseai.service.Topics;
 
 public class DummyListener extends DistryService {
     private static final String SERVICE_NAME = "dummy";
@@ -14,10 +15,10 @@ public class DummyListener extends DistryService {
     }
 
     public static void main(String[] args) throws Exception {
-        DummyListener dummyListener = new DummyListener(SERVICE_NAME, new ServiceConfiguration(new ActiveMQAdapter("failover://(tcp://192.168.0.101:61616)"), true, 10, "Admin.Heartbeat", true, "Admin.Cmd", "Admin.Publish"));
+        DummyListener dummyListener = new DummyListener(SERVICE_NAME, DistryUtils.createServiceConfiguration());
         dummyListener.start();
         
-        dummyListener.addMessageListener("HouseAI.CamDetector", new DistryListener() {
+        dummyListener.addMessageListener(Topics.CAM_DETECTOR, new DistryListener() {
             public void onMessage(Serializable receivedMessage) {
                 System.out.println("Received message " + receivedMessage);
             }

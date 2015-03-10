@@ -6,12 +6,17 @@
 		<artifactId>HouseAI</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>DummyListener</artifactId>
+	<artifactId>MediaService</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.nuc</groupId>
 			<artifactId>Service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.soundlibs</groupId>
+			<artifactId>jlayer</artifactId>
+			<version>1.0.1-1</version>
 		</dependency>
 	</dependencies>
 </project>

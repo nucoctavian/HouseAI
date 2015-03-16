@@ -7,6 +7,7 @@ import java.util.concurrent.CountDownLatch;
 import javax.imageio.ImageIO;
 import javax.jms.JMSException;
 
+import org.apache.log4j.Logger;
 import org.nuc.distry.service.DistryService;
 import org.nuc.distry.service.ServiceConfiguration;
 import org.nuc.houseai.service.Topics;
@@ -28,6 +29,7 @@ public class CamDetector extends DistryService implements CaptureCallback {
     private final CountDownLatch countDownLatch = new CountDownLatch(1);
 
     private static final String SERVICE_NAME = "camDetection";
+    private static final Logger LOGGER = Logger.getLogger(CamDetector.class);
 
     public CamDetector(ServiceConfiguration configuration) throws Exception {
         super(SERVICE_NAME, configuration);
@@ -44,10 +46,10 @@ public class CamDetector extends DistryService implements CaptureCallback {
             frameGrabber.setCaptureCallback(this);
             width = frameGrabber.getWidth();
             height = frameGrabber.getHeight();
-            System.out.println("Starting capture at " + width + "x" + height);
+            LOGGER.info("Starting capture at " + width + "x" + height);
 
         } catch (V4L4JException e) {
-            e.printStackTrace();
+            LOGGER.error("Failed to start video device", e);
         }
 
     }
@@ -58,7 +60,7 @@ public class CamDetector extends DistryService implements CaptureCallback {
             frameGrabber.startCapture();
             countDownLatch.await();
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error("Failed to start video device", e);
         }
     }
 
@@ -67,7 +69,7 @@ public class CamDetector extends DistryService implements CaptureCallback {
     }
 
     public void exceptionReceived(V4L4JException arg0) {
-        arg0.printStackTrace();
+        LOGGER.error(arg0);
     }
 
     public void nextFrame(VideoFrame frame) {
@@ -78,9 +80,9 @@ public class CamDetector extends DistryService implements CaptureCallback {
             this.sendMessage(Topics.CAM_DETECTOR, "Captura primita");
             frame.recycle();
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
         } catch (JMSException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
         }
     }
 }

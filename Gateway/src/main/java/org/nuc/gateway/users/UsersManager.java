@@ -30,6 +30,7 @@ public class UsersManager {
             LOGGER.warn("Credentials don't match:" + name + " " + password);
             return false;
         }
+
         LOGGER.info("Credentials match for user  ");
         return true;
     }
@@ -38,8 +39,13 @@ public class UsersManager {
         if (!usersByName.containsKey(name)) {
             return false;
         }
-        usersByName.remove(name);
-        return true;
+
+        if (usersByName.get(name).getPassword().equals(password)) {
+            usersByName.remove(name);
+            return true;
+        }
+
+        return false;
     }
 
     public boolean changePassword(String name, String oldPassword, String newPassword) {

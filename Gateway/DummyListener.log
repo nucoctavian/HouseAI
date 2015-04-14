@@ -1,0 +1,279 @@
+2015-04-14 19:24:40 INFO  JMSAdapter:43 - Trying to connect to : failover://(tcp://192.168.0.102:61616)
+2015-04-14 19:25:32 INFO  JMSAdapter:43 - Trying to connect to : failover://(tcp://192.168.0.102:61616)
+2015-04-14 19:25:54 INFO  JMSAdapter:43 - Trying to connect to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:25:54 INFO  FailoverTransport:1030 - Successfully connected to tcp://127.0.0.1:61616
+2015-04-14 19:25:55 INFO  JMSAdapter:51 - Connected to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:25:55 INFO  JMSAdapter:55 - Linking message listener to topic: Admin.Cmd
+2015-04-14 19:26:14 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:26:14 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:26:14 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:26:14 WARN  UsersManager:25 - Credentials don't match:andrei andrei
+2015-04-14 19:26:14 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:27:44 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:27:44 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:27:44 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:27:44 WARN  UsersManager:25 - Credentials don't match:andrei andrei
+2015-04-14 19:27:44 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:27:44 WARN  LoggingFilter:130 - EXCEPTION :
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:27:44 ERROR Gateway:49 - Caught exception on session (0x00000002: nio socket, server, /127.0.0.1:50063 => /127.0.0.1:6045)
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:27:44 INFO  LoggingFilter:186 - CLOSED
+2015-04-14 19:30:18 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:30:18 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:30:18 WARN  UsersManager:25 - Credentials don't match:andrei andrei
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=185 cap=2048: 00 00 00 B5 AC ED 00 05 73 72 01 00 24 6F 72 67...]
+2015-04-14 19:30:18 INFO  UsersManager:19 - New user created
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=1024: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:30:18 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=1024: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:30:18 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=512: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:30:18 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:30:18 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:30:19 WARN  LoggingFilter:130 - EXCEPTION :
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:30:19 ERROR Gateway:49 - Caught exception on session (0x00000003: nio socket, server, /127.0.0.1:50090 => /127.0.0.1:6045)
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:30:19 INFO  LoggingFilter:186 - CLOSED
+2015-04-14 19:36:05 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:36:05 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:36:05 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:36:05 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:36:05 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:06 WARN  LoggingFilter:130 - EXCEPTION :
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:36:06 ERROR Gateway:49 - Caught exception on session (0x00000004: nio socket, server, /127.0.0.1:50116 => /127.0.0.1:6045)
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:36:06 INFO  LoggingFilter:186 - CLOSED
+2015-04-14 19:36:22 INFO  JMSAdapter:43 - Trying to connect to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:36:23 INFO  FailoverTransport:1030 - Successfully connected to tcp://127.0.0.1:61616
+2015-04-14 19:36:23 INFO  JMSAdapter:51 - Connected to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:36:23 INFO  JMSAdapter:55 - Linking message listener to topic: Admin.Cmd
+2015-04-14 19:36:28 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:36:28 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:36:28 WARN  UsersManager:25 - Credentials don't match:andrei andrei
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=185 cap=2048: 00 00 00 B5 AC ED 00 05 73 72 01 00 24 6F 72 67...]
+2015-04-14 19:36:28 INFO  UsersManager:19 - New user created
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=1024: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:36:28 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=1024: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:36:28 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=512: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:36:28 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=205 cap=512: 00 00 00 C9 AC ED 00 05 73 72 01 00 2A 6F 72 67...]
+2015-04-14 19:36:28 INFO  UsersManager:33 - Credentials match for user  
+2015-04-14 19:36:28 INFO  UsersManager:19 - New user created
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=187 cap=256: 00 00 00 B7 AC ED 00 05 73 72 01 00 26 6F 72 67...]
+2015-04-14 19:36:28 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:36:29 WARN  LoggingFilter:130 - EXCEPTION :
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:36:29 ERROR Gateway:49 - Caught exception on session (0x00000001: nio socket, server, /127.0.0.1:50161 => /127.0.0.1:6045)
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:36:29 INFO  LoggingFilter:186 - CLOSED
+2015-04-14 19:38:35 INFO  JMSAdapter:43 - Trying to connect to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:38:35 INFO  FailoverTransport:1030 - Successfully connected to tcp://127.0.0.1:61616
+2015-04-14 19:38:35 INFO  JMSAdapter:51 - Connected to : failover://(tcp://127.0.0.1:61616)
+2015-04-14 19:38:35 INFO  JMSAdapter:55 - Linking message listener to topic: Admin.Cmd
+2015-04-14 19:38:50 INFO  LoggingFilter:186 - CREATED
+2015-04-14 19:38:50 INFO  LoggingFilter:186 - OPENED
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=2048: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:38:50 WARN  UsersManager:25 - Credentials don't match:andrei andrei
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=185 cap=2048: 00 00 00 B5 AC ED 00 05 73 72 01 00 24 6F 72 67...]
+2015-04-14 19:38:50 INFO  UsersManager:19 - New user created
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=182 cap=1024: 00 00 00 B2 AC ED 00 05 73 72 01 00 21 6F 72 67...]
+2015-04-14 19:38:50 INFO  UsersManager:34 - Credentials match for user  
+2015-04-14 19:38:50 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=1024: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:38:51 INFO  UsersManager:34 - Credentials match for user  
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=183 cap=512: 00 00 00 B3 AC ED 00 05 73 72 01 00 22 6F 72 67...]
+2015-04-14 19:38:51 INFO  UsersManager:34 - Credentials match for user  
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=205 cap=512: 00 00 00 C9 AC ED 00 05 73 72 01 00 2A 6F 72 67...]
+2015-04-14 19:38:51 INFO  UsersManager:34 - Credentials match for user  
+2015-04-14 19:38:51 INFO  UsersManager:19 - New user created
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=187 cap=256: 00 00 00 B7 AC ED 00 05 73 72 01 00 26 6F 72 67...]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - RECEIVED: HeapBuffer[pos=0 lim=196 cap=256: 00 00 00 C0 AC ED 00 05 73 72 01 00 26 6F 72 67...]
+2015-04-14 19:38:51 INFO  LoggingFilter:157 - SENT: HeapBuffer[pos=0 lim=0 cap=0: empty]
+2015-04-14 19:38:52 WARN  LoggingFilter:130 - EXCEPTION :
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:38:52 ERROR Gateway:49 - Caught exception on session (0x00000001: nio socket, server, /127.0.0.1:50208 => /127.0.0.1:6045)
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-04-14 19:38:52 INFO  LoggingFilter:186 - CLOSED

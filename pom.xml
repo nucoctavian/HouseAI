@@ -11,5 +11,7 @@
   	<module>TestSevice</module>
   	<module>Service</module>
   	<module>MediaService</module>
+  	<module>Gateway</module>
+  	<module>Core</module>
   </modules>
 </project>

@@ -11,10 +11,13 @@ import org.nuc.distry.service.ServiceConfiguration;
 import org.nuc.gateway.mina.MinaServer;
 import org.nuc.gateway.users.SessionManager;
 import org.nuc.gateway.users.UsersManager;
+import org.nuc.houseai.core.ChangePasswordRequest;
 import org.nuc.houseai.core.LoginRequest;
 import org.nuc.houseai.core.LogoutRequest;
+import org.nuc.houseai.core.RegisterRequest;
 import org.nuc.houseai.core.Request;
 import org.nuc.houseai.core.Response;
+import org.nuc.houseai.core.UnregisterRequest;
 import org.nuc.houseai.service.DistryUtils;
 
 public class Gateway extends DistryService implements IoHandler {
@@ -65,6 +68,7 @@ public class Gateway extends DistryService implements IoHandler {
                 response = new Response<LoginRequest>(loginRequest, false, "Failed to login");
             }
             session.write(response);
+            return;
         }
 
         if (request instanceof LogoutRequest) {
@@ -80,6 +84,56 @@ public class Gateway extends DistryService implements IoHandler {
                 response = new Response<LogoutRequest>(logoutRequest, false, "Failed to logout");
             }
             session.write(response);
+            return;
+        }
+
+        if (request instanceof RegisterRequest) {
+            final RegisterRequest registerRequest = (RegisterRequest) request;
+            final String name = registerRequest.getName();
+            final String password = registerRequest.getPassword();
+            final boolean result = userManager.register(name, password);
+            final Response<RegisterRequest> response;
+            if (result) {
+                response = new Response<RegisterRequest>(registerRequest, true, null);
+
+            } else {
+                response = new Response<RegisterRequest>(registerRequest, false, "Failed to register");
+            }
+            session.write(response);
+            return;
+        }
+
+        if (request instanceof UnregisterRequest) {
+            final UnregisterRequest unregisterRequest = (UnregisterRequest) request;
+            final String name = unregisterRequest.getName();
+            final String password = unregisterRequest.getPassword();
+            final boolean result = userManager.deleteAccount(name, password);
+            final Response<UnregisterRequest> response;
+            if (result) {
+                response = new Response<UnregisterRequest>(unregisterRequest, true, null);
+
+            } else {
+                response = new Response<UnregisterRequest>(unregisterRequest, false, "Failed to unregister");
+            }
+            session.write(response);
+            return;
+        }
+
+        if (request instanceof ChangePasswordRequest) {
+            final ChangePasswordRequest changePasswordRequest = (ChangePasswordRequest) request;
+            final String name = changePasswordRequest.getName();
+            final String oldPassword = changePasswordRequest.getPassword();
+            final String newPassword = changePasswordRequest.getNewPassword();
+            final boolean result = userManager.changePassword(name, oldPassword, newPassword);
+            final Response<ChangePasswordRequest> response;
+            if (result) {
+                response = new Response<ChangePasswordRequest>(changePasswordRequest, true, null);
+
+            } else {
+                response = new Response<ChangePasswordRequest>(changePasswordRequest, false, "Failed to change password");
+            }
+            session.write(response);
+            return;
         }
     }
 

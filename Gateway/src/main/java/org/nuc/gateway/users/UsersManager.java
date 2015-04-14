@@ -41,4 +41,13 @@ public class UsersManager {
         usersByName.remove(name);
         return true;
     }
+
+    public boolean changePassword(String name, String oldPassword, String newPassword) {
+        if (checkCredentials(name, oldPassword)) {
+            deleteAccount(name, oldPassword);
+            register(name, newPassword);
+            return true;
+        }
+        return false;
+    }
 }
